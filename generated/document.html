@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<title>API Document</title>
+
+<xmp theme="united" style="display:none;">
+#API for Presto Manager
+
+
+## HTTP | HTTPS:///api
+
+
+Swagger specification for REST API
+
+
+
+**Version** v1
+
+[**Terms of Service**]()
+
+
+
+
+
+
+
+
+
+
+
+
+# APIs
+
+
+## /api/user
+
+
+### GET
+
+<a id="getUsers">Finds all users on db</a>
+
+No pagination implemented
+
+
+
+
+
+
+
+#### Request
+
+
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| 200    | successful operation | Array[<a href="#/definitions/User">User</a>]|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## /api/user/{userId}
+
+
+### GET
+
+<a id="getUser">Finds user by id</a>
+
+
+
+
+
+
+
+
+
+#### Request
+
+
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th></th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int64)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| 200    | successful operation | <a href="#/definitions/User">User</a>|
+| 404    | User not found |  - |
+
+
+
+
+
+### PUT
+
+<a id="updateUser">Update user with id</a>
+
+
+
+
+
+
+
+
+
+#### Request
+
+
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>body</th>
+    <td>body</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    <td>
+    
+    <a href="#/definitions/User">User</a> 
+    </td>
+
+</tr>
+
+<tr>
+    <th></th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int64)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| 200    | successful operation | <a href="#/definitions/User">User</a>|
+| 404    | User not found |  - |
+
+
+
+
+
+
+
+### DELETE
+
+<a id="deleteUser">Delete user by id</a>
+
+
+
+
+
+
+
+
+
+#### Request
+
+
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th></th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int64)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| 200    | successful operation | <a href="#/definitions/User">User</a>|
+| 404    | User not found |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Definitions
+
+## <a name="/definitions/User">User</a>
+
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>type</th>
+        <th>required</th>
+        <th>description</th>
+        <th>example</th>
+    </tr>
+    
+        <tr>
+            <td>name</td>
+            <td>
+                
+                    
+                    string
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>surname</td>
+            <td>
+                
+                    
+                    string
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>address</td>
+            <td>
+                
+                    
+                    string
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>city</td>
+            <td>
+                
+                    
+                    string
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>password</td>
+            <td>
+                
+                    
+                    string
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+</table>
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>

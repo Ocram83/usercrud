@@ -1,0 +1,130 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger specification for REST API",
+    "version" : "v1",
+    "title" : "API for Presto Manager"
+  },
+  "basePath" : "/api",
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/api/user" : {
+      "get" : {
+        "summary" : "Finds all users on db",
+        "description" : "No pagination implemented",
+        "operationId" : "getUsers",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/User"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/{userId}" : {
+      "get" : {
+        "summary" : "Finds user by id",
+        "description" : "",
+        "operationId" : "getUser",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User"
+            }
+          },
+          "404" : {
+            "description" : "User not found"
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Update user with id",
+        "description" : "",
+        "operationId" : "updateUser",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/User"
+          }
+        }, {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User"
+            }
+          },
+          "404" : {
+            "description" : "User not found"
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Delete user by id",
+        "description" : "",
+        "operationId" : "deleteUser",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User"
+            }
+          },
+          "404" : {
+            "description" : "User not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "User" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "surname" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
