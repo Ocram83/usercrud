@@ -24,7 +24,7 @@ Please note that a more complete version of the documentation will be also avail
 ```
 http://localhost:8080/swagger-ui.html 
 ```
-once the application is running.
+once the application is running. Please note that an in-memory database is used and date will be persisted only until the server is up and running.
 
 ## Front-end
 
