@@ -8,7 +8,7 @@ Front-end and Back-end communicate using the REST paradigm, exchangin JSON strin
 
 The two application run separately, back-end is deployed on tomcat, front end uses node server.
 
-##Back-end 
+## Back-end 
 
 In order to run the back-end you need to uses jdk >= 1.8 and have maven installed on you local machine.
 The application can be run with a single command thanks to Spring Boot! Just type ./mvnw spring-boot:run from the root directory of your working copy of this repository and magics happens. The application will be available on the address http://localhost:8080/api/user
@@ -16,7 +16,7 @@ The application can be run with a single command thanks to Spring Boot! Just typ
 Documentation based on Openapi specs is generated during maven compile phase and is available in the directory ./generated.
 Please note that a more complete version of the documentation will be also available on the address http://localhost:8080/swagger-ui.html once the application is running.
 
-##Front-end
+## Front-end
 
 In order to run the front-end you need to have node >= 8 installed on your local machine.
 To start the front-end enter the directory ./front-end/client/ and type npm install to compile the application, then run
