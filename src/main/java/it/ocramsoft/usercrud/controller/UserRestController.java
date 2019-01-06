@@ -3,6 +3,8 @@ package it.ocramsoft.usercrud.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import com.google.common.collect.ImmutableList;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,13 +31,14 @@ import it.ocramsoft.usercrud.service.UserService;
 @Api(value = "/")
 @RestController
 @RequestMapping(value = "/api")
+@CrossOrigin(origins = "*")
 public class UserRestController {
 
 	@Autowired
 	private UserService userService;
 
 	@PostMapping("/user")
-	public void saveUser(User user) {
+	public void saveUser(@RequestBody User user) {
 		userService.saveUser(user);
 	}
 

@@ -109,6 +109,10 @@
     "User" : {
       "type" : "object",
       "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "name" : {
           "type" : "string"
         },
@@ -119,9 +123,6 @@
           "type" : "string"
         },
         "city" : {
-          "type" : "string"
-        },
-        "password" : {
           "type" : "string"
         }
       }
