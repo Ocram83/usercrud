@@ -4,7 +4,7 @@ This repository contains an example CRUD application on a very basic user object
 
 The application features a back-end written in Java by mean of the Spring framework, and a front-end written in Angular7.
 
-Front-end and Back-end communicate using the REST paradigm, exchangin JSON strings representing the user object.
+Front-end and Back-end communicate using the REST paradigm, exchanging JSON strings representing the user object.
 
 The two application run separately, back-end is deployed on tomcat, front end uses node server.
 
