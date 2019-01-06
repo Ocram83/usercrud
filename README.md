@@ -10,7 +10,7 @@ The two application run separately, back-end is deployed on tomcat, front end us
 
 ## Back-end 
 
-In order to run the back-end you need to uses jdk >= 1.8 and have maven installed on you local machine.
+In order to run the back-end you need to have jdk >= 1.8 and maven installed on you local machine.
 The application can be run with a single command thanks to Spring Boot! Just type ./mvnw spring-boot:run from the root directory of your working copy of this repository and magics happens. The application will be available on the address 
 
 http://localhost:8080/api/user
