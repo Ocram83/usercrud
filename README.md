@@ -1,3 +1,5 @@
+https://travis-ci.org/Ocram83/usercrud.svg?branch=master
+
 # User Crud
 
 This repository contains an example CRUD application on a very basic user object.
